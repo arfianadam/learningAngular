@@ -1,0 +1,28 @@
+{
+  "name": "learningAngular",
+  "description": "A simple page about Angular simple uses",
+  "main": "public/index.html",
+  "moduleType": [
+    "globals"
+  ],
+  "keywords": [
+    "angular"
+  ],
+  "authors": [
+    "Arfian Adam"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.9",
+    "bootstrap": "~3.3.6",
+    "jquery": "~2.2.0"
+  }
+}

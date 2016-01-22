@@ -1,0 +1,30 @@
+body {
+	color: #444;
+}
+
+header {
+	padding: 100px 0;
+	background-color: #EC3838;
+	color: #2b2b2b;
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+header h1 {
+	font-size: 56px;
+}
+
+header h4 {
+	color: #eee;
+}
+
+#content {
+	position: relative;
+    top: -58px;
+    background: #fff;
+    border-radius: 15px;
+    padding: 30px;
+    /*-webkit-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.24);
+	-moz-box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.24);
+	box-shadow: 0px 0px 19px 0px rgba(0,0,0,0.24);*/
+}

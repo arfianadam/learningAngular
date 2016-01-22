@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="description" content="Learn Angular">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Angular Uses</title>
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:700' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css/style.min.css">
+        <link rel="author" href="humans.txt">
+    </head>
+    <body>
+        <header>
+            <h1>Angular Uses</h1>
+            <h4>Arfian Adam</h4>
+        </header>
+        <div class="container" id="content">
+            <section ng-app=''>
+                <h2>Simple data binding</h2>
+                <div class="row">
+                    <div class="col-md-8">
+<pre>
+<code>
+&lt;html ng-app&gt;
+    ...
+    &lt;div class=&quot;form-group&quot;&gt;
+        &lt;label for=&quot;&quot;&gt;Name&lt;/label&gt;
+        &lt;input type=&quot;text&quot; ng-model=&quot;name&quot; class=&quot;form-control&quot;&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;Hello { { name } } !&lt;/h3&gt;
+    ...
+&lt;/html&gt;
+</code>
+</pre>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label for="">Name</label>
+                            <input type="text" ng-model="name" class="form-control">
+                        </div>
+                        <h3>Hello {{name}} !</h3>
+                    </div>
+                </div>
+            </section>
+            <hr>
+            <section ng-app='todoApp' id="App2">
+                <h2>Create list</h2>
+                <div class="row">
+                    <div class="col-md-8">
+                    <h4>HTML</h4>
+<pre>
+<code>
+&lt;div ng-app=&quot;todoApp&quot;&gt;
+    &lt;div ng-controller=&quot;ListCtrl&quot;&gt;
+        &lt;form class=&quot;form-group&quot; ng-submit=&quot;addList()&quot;&gt;
+            &lt;label for=&quot;&quot;&gt;Add a todo&lt;/label&gt;
+            &lt;input type=&quot;text&quot; ng-model=&quot;enteredList&quot; class=&quot;form-control&quot;&gt;
+        &lt;/form&gt;
+        &lt;h3&gt;My todo list&lt;/h3&gt;
+        &lt;ul&gt;
+            &lt;li ng-repeat=&quot;todo in todos&quot;&gt;{{todo}}&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code>
+</pre>
+                    <h4>JS</h4>
+<pre>
+<code class="js">
+angular.module('todoApp', [])
+    .controller('ListCtrl', ['$scope', function($scope) {
+            $scope.todos = [];
+            $scope.addList = function() {
+                $scope.todos.push($scope.enteredList);
+                $scope.enteredList = '';
+            };
+        }]);
+</code>
+</pre>
+                    </div>
+                    <div class="col-md-4" ng-controller="ListCtrl">
+                        <form class="form-group" ng-submit="addList()">
+                            <label for="">Add a todo</label>
+                            <input type="text" ng-model="enteredList" class="form-control">
+                        </form>
+                        <h3>My todo list</h3>
+                        <ul>
+                            <li ng-repeat="todo in todos">{{todo}}</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script src="js/main.min.js"></script>
+    </body>
+</html>
