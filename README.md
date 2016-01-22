@@ -12,3 +12,11 @@ npm install
 ```
 bower install
 ```
+
+### Turning on task `watch` on `Grunt`
+
+```
+grunt
+```
+
+Every assets will be combined and minified after every save.
