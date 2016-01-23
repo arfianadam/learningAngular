@@ -9,4 +9,4 @@ angular.module('todoApp', [])
 			};
 		}]);
 
-angular.bootstrap(document.getElementById("App2"),['todoApp']);
+angular.bootstrap($('#App2'),['todoApp']);
