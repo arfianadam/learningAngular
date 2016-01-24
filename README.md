@@ -3,7 +3,7 @@ A simple page about learning AngularJs
 
 ## Usage
 
-By using this you are already know how to use [`Grunt`] (http://gruntjs.com/) or [`Gulp`] and [`Bower`] (http://bower.io/).
+By using this you are already know how to use [`Grunt`] (http://gruntjs.com/) or `Gulp` and [`Bower`] (http://bower.io/).
 
 ### Install dependancies
 ```
